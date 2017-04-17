@@ -14,3 +14,11 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+$(document).ready(function() {
+  var start = Date.now();
+  $('form').on('submit', function() {
+    var finish = Date.now();
+    var time = finish - start;
+    $('#time').val(time);
+  });
+});

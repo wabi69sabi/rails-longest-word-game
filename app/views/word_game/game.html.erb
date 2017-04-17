@@ -1,0 +1,16 @@
+<h1 class="text-center">Create a Word from these letters:</h1>
+
+<h1 class="text-center"> <%= @grid.join(", ") %> </h1>
+
+<form action="/word_game/score" method="get" class="text-center">
+  <div class="container padded">
+    <label for="word">Guess your word</label><br>
+    <input type="text" id="word" name="attempt" placeholder="word" class="margin"><br>
+    <input type="hidden" id="time" name="time" value="">
+    <input type="submit" value="Go on!" class="btn btn-primary">
+    <!-- <%= link_to "Score", score_path, class: "btn btn-primary" %> -->
+    <input type="hidden" name="grid" value=<%= @grid.join %>>
+  </div>
+</form>
+
+<!-- <p class="text-center">Find me in app/views/word_game/game.html.erb</p> -->
